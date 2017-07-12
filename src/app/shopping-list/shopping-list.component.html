@@ -3,15 +3,16 @@
     <div class="page-header">
       <h2>Shopping list</h2>
     </div>
+
+    <!--INGREDIENTS LIST-->
     <div class="list-group">
-      <a href="#"
-         class="list-group-item"
-         *ngFor="let i of ingredients">
-        {{i.name}} <span class="badge">{{i.amount}}</span>
-      </a>
+      <app-shopping-item *ngFor="let i of ingredients" [shoppingItem]="i"></app-shopping-item>
     </div>
   </div>
+
+  <!--INGREDIENTS EDIT-->
   <div class="col-xs-5">
     <app-shopping-edit></app-shopping-edit>
   </div>
+
 </div>

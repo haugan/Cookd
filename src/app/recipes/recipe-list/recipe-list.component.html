@@ -1,2 +1,32 @@
-<p>recipe-list</p>
-<app-recipe-item></app-recipe-item>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="page-header">
+      <h2>Recipe list <button class="btn btn-success pull-right">Create new</button></h2>
+    </div>
+    <p>
+
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+
+    <!--<app-recipe-item></app-recipe-item>-->
+    <ul class="media-list" *ngFor="let r of recipes">
+      <li class="media">
+        <div class="media-left media-middle">
+          <a href="#">
+            <img class="media-object img-circle"
+                 src="{{r.imgURL}}"
+                 alt="{{r.description}}" style="max-height: 95px">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{r.name}}</h4>
+          {{r.description}}
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</div>

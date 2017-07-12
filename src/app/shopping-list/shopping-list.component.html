@@ -1,2 +1,17 @@
-<p>shopping-list</p>
-<app-shopping-edit></app-shopping-edit>
+<div class="row">
+  <div class="col-xs-7">
+    <div class="page-header">
+      <h2>Shopping list</h2>
+    </div>
+    <div class="list-group">
+      <a href="#"
+         class="list-group-item"
+         *ngFor="let i of ingredients">
+        {{i.name}} <span class="badge">{{i.amount}}</span>
+      </a>
+    </div>
+  </div>
+  <div class="col-xs-5">
+    <app-shopping-edit></app-shopping-edit>
+  </div>
+</div>

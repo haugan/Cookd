@@ -1,19 +1,25 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-shopping-item',
   templateUrl: './shopping-item.component.html',
   styleUrls: ['./shopping-item.component.css']
 })
-export class ShoppingItemComponent implements OnInit {
-  @Input() shoppingItem: {
+export class ShoppingItemComponent {
+  @Input('shoppingItem') item: {
     name: string,
     amount: number
   };
 
-  constructor() { }
+  @Output() itemClicked = new EventEmitter<{
+    name: string,
+    amount: number
+  }>();
 
-  ngOnInit() {
+  onItemClick() { // TODO: inform ShoppingList of triggered event (and pass some data) ..
+    this.itemClicked.emit({
+      name: this.item.name,
+      amount: this.item.amount
+    });
   }
-
 }

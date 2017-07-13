@@ -6,7 +6,10 @@
 
     <!--INGREDIENTS LIST-->
     <div class="list-group">
-      <app-shopping-item *ngFor="let i of ingredients" [shoppingItem]="i"></app-shopping-item>
+      <app-shopping-item *ngFor="let i of ingredients"
+                         [shoppingItem]="i"
+                         (itemClicked)="onClickedItem($event)">
+      </app-shopping-item>
     </div>
   </div>
 

@@ -3,13 +3,15 @@
     <div class="media-left media-middle">
       <a href="#">
         <img class="media-object img-circle"
-             src="{{recipeItem.imgURL}}"
-             alt="{{recipeItem.description}}" style="max-height: 95px">
+             src="{{item.imgURL}}"
+             alt="{{item.description}}" style="max-height: 95px">
       </a>
     </div>
     <div class="media-body">
-      <h4 class="media-heading">{{recipeItem.name}}</h4>
-      {{recipeItem.description}}
+      <h4 class="media-heading">{{item.name}}</h4>
+      <p class="text-info">
+        {{item.description}}
+      </p>
     </div>
   </li>
 </ul>

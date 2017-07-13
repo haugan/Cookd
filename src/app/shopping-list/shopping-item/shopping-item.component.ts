@@ -11,12 +11,12 @@ export class ShoppingItemComponent {
     amount: number
   };
 
-  @Output() itemClicked = new EventEmitter<{
+  @Output('shoppingItemClick') itemClicked = new EventEmitter<{
     name: string,
     amount: number
   }>();
 
-  onItemClick() { // TODO: inform ShoppingList of triggered event (and pass some data) ..
+  onItemClick() {
     this.itemClicked.emit({
       name: this.item.name,
       amount: this.item.amount

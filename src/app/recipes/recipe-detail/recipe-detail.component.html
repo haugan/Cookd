@@ -1,32 +1,28 @@
-<div class="row">
-  <div class="col-xs-12">
-    <img src="" alt="" class="img-responsive">
-  </div>
-</div>
-<div class="row">
+<div class="row" *ngIf="!recipeItem.isEmpty">
   <div class="col-xs-12">
     <div class="page-header">
-      <h2>
-        Recipe details
+      <h1>
+        {{recipeItem.name}}
         <button type="button"
-                class="btn btn-primary dropdown-toggle pull-right">
-          Manage
-          <span class="caret"></span>
+                class="btn btn-primary dropdown-toggle pull-right">Manage <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
           <li><a href="">Add to shopping list</a></li>
           <li><a href="">Edit recipe</a></li>
           <li><a href="">Delete recipe</a></li>
         </ul>
-      </h2>
+      </h1>
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row" *ngIf="!recipeItem.isEmpty">
   <div class="col-xs-12">
-    <p>Description</p>
-  </div>
-  <div class="col-xs-12">
-    <p>Ingredients</p>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>{{recipeItem.recipeText}}</p>
+        <p><img src="{{recipeItem.imgURL}}" alt="{{recipeItem.description}}"></p>
+      </div>
+    </div>
   </div>
 </div>
+

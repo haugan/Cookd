@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Recipe} from './recipes/recipe.model';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,14 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   selectedNav = 'recipes';
+  selectedRecipe: Recipe;
 
   onNavSelected(currentSelection: string) {
     this.selectedNav = currentSelection;
+  }
+
+  onRecipeItemClicked(recipeItem: Recipe) {
+    this.selectedRecipe = recipeItem;
+    console.log(recipeItem.name)
   }
 }

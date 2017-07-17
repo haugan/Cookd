@@ -8,11 +8,15 @@
   <div class="row">
     <div class="col-lg-6">
       <app-recipe-list
-        *ngIf="selectedNav === 'recipes'"></app-recipe-list>
+        *ngIf="selectedNav === 'recipes'"
+        (recipeItemClickEvent)="onRecipeItemClicked($event)">
+      </app-recipe-list>
     </div>
     <div class="col-lg-6">
       <app-recipe-detail
-        *ngIf="selectedNav === 'recipes'"></app-recipe-detail>
+        *ngIf="selectedNav === 'recipes'"
+        [recipeItem]="selectedRecipe">
+      </app-recipe-detail>
     </div>
   </div>
   <!--SHOPPING LIST-->

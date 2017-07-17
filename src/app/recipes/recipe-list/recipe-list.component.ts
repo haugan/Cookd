@@ -39,6 +39,4 @@ export class RecipeListComponent {
       // imgURL
       'https://s-media-cache-ak0.pinimg.com/originals/55/29/28/55292852b92f0504d17dd96c965c46eb.jpg')
   ];
-
-  constructor() {}
 }

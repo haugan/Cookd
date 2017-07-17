@@ -37,7 +37,7 @@ export class RecipeListComponent {
       'ctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper ve' +
       'l, tincidunt sed, euismod in, nibh.',
       // imgURL
-      'http://recipes.timesofindia.com/photo/55178711.cms'),
+      'https://img.alicdn.com/imgextra/i2/99733778/TB2Z_KXetuO.eBjSZFCXXXULFXa_!!99733778.jpg'),
     new Recipe(
       // name
       'Japchae (잡채)',

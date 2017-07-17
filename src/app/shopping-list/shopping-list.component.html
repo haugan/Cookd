@@ -1,19 +1,19 @@
-<!--SHOPPING ITEM LIST-->
-<div class="col-xs-6">
-  <div class="page-header">
-    <h1>Your shopping list</h1>
+<div class="row">
+  <div class="col-xs-6">
+    <div class="page-header">
+      <h1>Your shopping list</h1>
+    </div>
+    <div class="list-group">
+      <app-shopping-item *ngFor="let i of ingredients"
+                         [shoppingItem]="i"
+                         (itemClickEvent)="onClickedItem($event)">
+      </app-shopping-item>
+    </div>
   </div>
-  <div class="list-group">
-    <app-shopping-item *ngFor="let i of ingredients"
-                       [shoppingItem]="i"
-                       (itemClickEvent)="onClickedItem($event)">
-    </app-shopping-item>
+  <div class="col-xs-6">
+    <div class="page-header">
+      <h1>Edit list item</h1>
+    </div>
+    <app-shopping-edit></app-shopping-edit>
   </div>
-</div>
-<!--EDIT SHOPPING ITEM-->
-<div class="col-xs-6">
-  <div class="page-header">
-    <h1>Edit list item</h1>
-  </div>
-  <app-shopping-edit></app-shopping-edit>
 </div>

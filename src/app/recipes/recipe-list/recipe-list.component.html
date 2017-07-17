@@ -8,6 +8,6 @@
   <app-recipe-item
     *ngFor="let r of recipes"
     [recipeItem]="r"
-    (itemClickEvent)="onRecipeItemClicked($event)">
+    (itemClickEvent)="onRecipeItemClicked(r)">
   </app-recipe-item>
 </ul>

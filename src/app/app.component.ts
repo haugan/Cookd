@@ -8,14 +8,8 @@ import {Recipe} from './recipes/recipe.model';
 })
 export class AppComponent {
   selectedNav = 'recipes';
-  selectedRecipe: Recipe;
 
   onNavSelected(currentSelection: string) {
     this.selectedNav = currentSelection;
-  }
-
-  onRecipeItemClicked(recipeItem: Recipe) {
-    this.selectedRecipe = recipeItem;
-    console.log(recipeItem.name)
   }
 }

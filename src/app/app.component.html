@@ -1,29 +1,8 @@
-<nav class="navbar navbar-default">
-  <div class="container">
-    <app-header (navSelectionEvent)="onNavSelected($event)"></app-header>
-  </div>
-</nav>
+
+<app-header (navSelectionEvent)="onNavSelected($event)"></app-header>
 <div class="container">
-  <!--RECIPES-->
-  <div class="row">
-    <div class="col-lg-6">
-      <app-recipe-list
-        *ngIf="selectedNav === 'recipes'"
-        (recipeItemClickEvent)="onRecipeItemClicked($event)">
-      </app-recipe-list>
-    </div>
-    <div class="col-lg-6">
-      <app-recipe-detail
-        *ngIf="selectedNav === 'recipes'"
-        [recipeItem]="selectedRecipe">
-      </app-recipe-detail>
-    </div>
-  </div>
-  <!--SHOPPING LIST-->
-  <div class="row">
-    <div class="col-lg-12">
-      <app-shopping-list
-        *ngIf="selectedNav === 'shoppingList'"></app-shopping-list>
-    </div>
-  </div>
+  <app-recipes
+    *ngIf="selectedNav === 'recipes'"></app-recipes>
+  <app-shopping-list
+    *ngIf="selectedNav === 'shoppingList'"></app-shopping-list>
 </div>

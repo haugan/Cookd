@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipesComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log('RecipesComponent constructor called');
+  }
 
   ngOnInit() {
   }

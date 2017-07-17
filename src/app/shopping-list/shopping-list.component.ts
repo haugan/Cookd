@@ -22,4 +22,8 @@ export class ShoppingListComponent {
       ${itemData.name} (${itemData.amount})
     `);
   }
+
+  constructor() {
+    console.log('ShoppingList constructor called');
+  }
 }

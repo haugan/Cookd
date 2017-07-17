@@ -30,4 +30,7 @@ import { ShoppingItemComponent } from './shopping-list/shopping-item/shopping-it
   bootstrap: [AppComponent]
 })
 export class AppModule {
+  constructor() {
+    console.log('App module constructor called');
+  }
 }

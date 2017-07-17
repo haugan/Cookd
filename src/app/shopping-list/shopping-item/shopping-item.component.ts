@@ -22,4 +22,8 @@ export class ShoppingItemComponent {
       amount: this.item.amount
     });
   }
+
+  constructor() {
+    console.log('ShoppingItem constructor called');
+  }
 }

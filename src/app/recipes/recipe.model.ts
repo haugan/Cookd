@@ -3,5 +3,6 @@ export class Recipe {
               public description: string,
               public imgURL: string) {
     // Automatic assignment of parameters to properties!
+    console.log('Recipe model constructor called');
   }
 }

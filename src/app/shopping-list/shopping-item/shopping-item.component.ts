@@ -1,4 +1,9 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output
+} from '@angular/core';
 
 @Component({
   selector: 'app-shopping-item',
@@ -6,24 +11,22 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
   styleUrls: ['./shopping-item.component.css']
 })
 export class ShoppingItemComponent {
-  @Input('shoppingItem') item: {
+  @Input() shoppingItem: {
     name: string,
     amount: number
   };
 
-  @Output('shoppingItemClick') itemClicked = new EventEmitter<{
+  @Output() itemClickEvent = new EventEmitter<{
     name: string,
     amount: number
   }>();
 
   onItemClick() {
-    this.itemClicked.emit({
-      name: this.item.name,
-      amount: this.item.amount
+    this.itemClickEvent.emit({
+      name: this.shoppingItem.name,
+      amount: this.shoppingItem.amount
     });
   }
 
-  constructor() {
-    console.log('ShoppingItem constructor called');
-  }
+  constructor() { }
 }

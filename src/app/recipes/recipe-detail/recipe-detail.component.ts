@@ -7,8 +7,5 @@ import { Component } from '@angular/core';
 })
 export class RecipeDetailComponent {
 
-  constructor() {
-    console.log('RecipeDetail constructor called');
-  }
-
+  constructor() {}
 }

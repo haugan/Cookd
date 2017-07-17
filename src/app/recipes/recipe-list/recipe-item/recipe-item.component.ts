@@ -6,14 +6,11 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent {
-  @Input('recipeItem') item: {
+  @Input() recipeItem: {
     name: string,
     description: string,
     imgURL: string
   };
 
-  constructor() {
-    console.log('RecipeItem constructor called');
-  }
-
+  constructor() {}
 }

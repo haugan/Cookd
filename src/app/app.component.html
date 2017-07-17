@@ -1,9 +1,25 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <app-header (navSelectionEvent)="onNavSelected($event)"></app-header>
+  </div>
+</nav>
 <div class="container">
+  <!--RECIPES-->
   <div class="row">
-    <div class="col-md-12">
-      <app-header></app-header>
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+    <div class="col-lg-6">
+      <app-recipe-list
+        *ngIf="selectedNav === 'recipes'"></app-recipe-list>
+    </div>
+    <div class="col-lg-6">
+      <app-recipe-detail
+        *ngIf="selectedNav === 'recipes'"></app-recipe-detail>
+    </div>
+  </div>
+  <!--SHOPPING LIST-->
+  <div class="row">
+    <div class="col-lg-12">
+      <app-shopping-list
+        *ngIf="selectedNav === 'shoppingList'"></app-shopping-list>
     </div>
   </div>
 </div>

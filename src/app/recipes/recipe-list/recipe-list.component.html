@@ -1,14 +1,7 @@
-<div class="row">
-  <div class="col-xs-12">
-    <div class="page-header">
-      <h2>Recipe list <button class="btn btn-success pull-right">Create new</button></h2>
-    </div>
-  </div>
+<div class="page-header">
+  <h1>
+    Your recipes <button class="btn btn-success pull-right">Add new</button>
+  </h1>
 </div>
-<div class="row">
-  <div class="col-xs-12">
-    <!--RECIPE ITEM MEDIA LIST-->
-    <app-recipe-item *ngFor="let r of recipes"
-                     [recipeItem]="r"></app-recipe-item>
-  </div>
-</div>
+
+<app-recipe-item *ngFor="let r of recipes" [recipeItem]="r"></app-recipe-item>

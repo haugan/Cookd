@@ -1,17 +1,18 @@
 <ul class="media-list">
   <li class="media">
+    <!--IMAGE-->
     <div class="media-left media-middle">
       <a href="#">
         <img class="media-object img-circle"
-             src="{{item.imgURL}}"
-             alt="{{item.description}}" style="max-height: 95px">
+             style="max-height: 95px"
+             src="{{recipeItem.imgURL}}"
+             alt="{{recipeItem.description}}">
       </a>
     </div>
+    <!--TEXT CONTENT-->
     <div class="media-body">
-      <h4 class="media-heading">{{item.name}}</h4>
-      <p class="text-info">
-        {{item.description}}
-      </p>
+      <h4 class="media-heading">{{recipeItem.name}}</h4>
+      <p class="text-info">{{recipeItem.description}}</p>
     </div>
   </li>
 </ul>

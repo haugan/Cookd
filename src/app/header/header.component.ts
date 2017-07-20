@@ -1,17 +1,13 @@
-import {
-  Component,
-  EventEmitter,
-  Output
-} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-  @Output() navSelectionEvent = new EventEmitter<string>();
+  @Output() selectionEvent = new EventEmitter<string>();
 
   onNavSelect(userSelection: string) {
-    this.navSelectionEvent.emit(userSelection);
+    this.selectionEvent.emit(userSelection);
   }
 }

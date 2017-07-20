@@ -1,8 +1,8 @@
-
-<app-header (navSelectionEvent)="onNavSelected($event)"></app-header>
+<app-header (selectionEvent)="onNavSelected($event)">
+</app-header>
 <div class="container">
-  <app-recipes
-    *ngIf="selectedNav === 'recipes'"></app-recipes>
-  <app-shopping-list
-    *ngIf="selectedNav === 'shoppingList'"></app-shopping-list>
+  <app-recipes *ngIf="selectedNav === 'recipes'">
+  </app-recipes>
+  <app-shopping-list *ngIf="selectedNav === 'shoppingList'">
+  </app-shopping-list>
 </div>

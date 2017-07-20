@@ -10,6 +10,7 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { ShoppingItemComponent } from './shopping-list/shopping-item/shopping-item.component';
+import { HighlighterDirective } from './highlighter.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ShoppingItemComponent } from './shopping-list/shopping-item/shopping-it
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    ShoppingItemComponent
+    ShoppingItemComponent,
+    HighlighterDirective
   ],
   imports: [
     BrowserModule

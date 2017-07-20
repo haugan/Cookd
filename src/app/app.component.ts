@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {Recipe} from './recipes/recipe.model';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +6,9 @@ import {Recipe} from './recipes/recipe.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  selectedNav = 'shoppingList';
+  selectedNav = 'recipes';
 
-  onNavSelected(currentSelection: string) {
-    this.selectedNav = currentSelection;
+  onNavSelected(navSelection: string) {
+    this.selectedNav = navSelection;
   }
 }

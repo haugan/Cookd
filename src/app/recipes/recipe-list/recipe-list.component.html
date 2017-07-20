@@ -1,13 +1,14 @@
 <div class="page-header">
   <h1>
     Your recipes
-    <button class="btn btn-success btn-sm pull-right">Add recipe</button>
+    <button class="btn btn-success btn-sm pull-right">Add recipe
+    </button>
   </h1>
 </div>
 <ul class="media-list">
   <app-recipe-item
     *ngFor="let r of recipes"
-    [recipeItem]="r"
-    (itemClickEvent)="onRecipeItemClicked(r)">
+    [recipeInput]="r"
+    (recipeSelectedEmitter)="onRecipeSelected(r)">
   </app-recipe-item>
 </ul>

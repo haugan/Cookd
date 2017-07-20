@@ -1,4 +1,9 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Output
+} from '@angular/core';
+
 import {Recipe} from '../recipe.model';
 
 @Component({
@@ -55,9 +60,9 @@ export class RecipeListComponent {
       'https://s-media-cache-ak0.pinimg.com/originals/55/29/28/55292852b92f0504d17dd96c965c46eb.jpg'),
   ];
 
-  @Output() recipeItemClickEvent = new EventEmitter<Recipe>();
+  @Output() recipeSelectedEmitter = new EventEmitter<Recipe>();
 
-  onRecipeItemClicked(recipeItem: Recipe) {
-    this.recipeItemClickEvent.emit(recipeItem);
+  onRecipeSelected(selection: Recipe) {
+    this.recipeSelectedEmitter.emit(selection);
   }
 }

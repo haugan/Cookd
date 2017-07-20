@@ -9,12 +9,12 @@ import {Ingredient} from '../../shared/ingredient.model';
 export class ShoppingEditComponent {
   @ViewChild('ingredientNameInput') nameInputRef: ElementRef;
   @ViewChild('ingredientAmountInput') amountInputRef: ElementRef;
-  @Output() ingredientAddedEvent = new EventEmitter<Ingredient>();
+  @Output() ingredientEmitter = new EventEmitter<Ingredient>();
 
   onAddClick() {
     const ingredientName = this.nameInputRef.nativeElement.value;
     const ingredientAmount = this.amountInputRef.nativeElement.value;
     const newIngredient = new Ingredient(ingredientName, ingredientAmount);
-    this.ingredientAddedEvent.emit(newIngredient);
+    this.ingredientEmitter.emit(newIngredient);
   }
 }

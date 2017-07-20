@@ -8,10 +8,8 @@ import {Recipe} from './recipe.model';
 })
 export class RecipesComponent {
   selectedRecipe: Recipe;
-  recipeSelected = false;
 
-  onRecipeItemClicked(recipeItem: Recipe) {
-    this.selectedRecipe = recipeItem;
-    this.recipeSelected = true;
+  onRecipeSelected(selection: Recipe) {
+    this.selectedRecipe = selection;
   }
 }

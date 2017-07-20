@@ -5,9 +5,9 @@ import {Component, EventEmitter, Output} from '@angular/core';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-  @Output() selectionEvent = new EventEmitter<string>();
+  @Output() navSelectedEvent = new EventEmitter<string>();
 
   onNavSelect(userSelection: string) {
-    this.selectionEvent.emit(userSelection);
+    this.navSelectedEvent.emit(userSelection);
   }
 }

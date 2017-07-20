@@ -1,8 +1,10 @@
 <app-header (navSelectedEvent)="onNavSelected($event)">
 </app-header>
-<div class="container">
-  <app-recipes *ngIf="selectedNav.match('recipes')">
+<div class="container" [ngSwitch]="selectedNav">
+  <app-recipes *ngSwitchCase="'recipes'">
   </app-recipes>
-  <app-shopping-list *ngIf="selectedNav.match('shoppingList')">
+  <app-shopping-list *ngSwitchCase="'shoppingList'">
   </app-shopping-list>
+  <!--<app-shopping-list *ngIf="selectedNav.match('shoppingList')">-->
+  <!--</app-shopping-list>-->
 </div>

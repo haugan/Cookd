@@ -11,8 +11,8 @@ import {
   selector: '[appHighlightHover]'
 })
 export class HighlighterDirective implements OnInit {
-  @Input() defaultColor = 'transparent';
-  @Input() highlightColor = 'transparent';
+  @Input() defaultColor = 'grey';
+  @Input() highlightColor = 'red';
   @HostBinding('style.color') color;
 
   constructor(private r: Renderer2, private e: ElementRef) {

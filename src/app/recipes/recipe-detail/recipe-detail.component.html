@@ -1,18 +1,21 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="page-header">
-      <h1 class="text-info">
+      <h1 class="text-info" appHighlightHover>
         {{recipe.name}}
-        <button type="button"
-                class="btn btn-primary btn-sm dropdown-toggle pull-right">
-          Manage recipe
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="">Add to shopping list</a></li>
-          <li><a href="">Edit recipe</a></li>
-          <li><a href="">Delete recipe</a></li>
-        </ul>
+        <div class="btn-group pull-right"
+             appDropdown>
+          <button type="button"
+                  class="btn btn-primary btn-sm dropdown-toggle">
+            Manage recipe
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="">Add to shopping list</a></li>
+            <li><a href="">Edit recipe</a></li>
+            <li><a href="">Delete recipe</a></li>
+          </ul>
+        </div>
       </h1>
     </div>
   </div>
@@ -25,9 +28,9 @@
         </p>
         <p class="text-center">
           <img src="{{recipe.imgURL}}"
-                alt="{{recipe.description}}"
-                style="max-width: 500px"
-                class="img-rounded">
+               alt="{{recipe.description}}"
+               style="max-width: 500px"
+               class="img-rounded">
         </p>
       </div>
     </div>

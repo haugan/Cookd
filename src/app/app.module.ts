@@ -11,6 +11,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { ShoppingItemComponent } from './shopping-list/shopping-item/shopping-item.component';
 import { HighlighterDirective } from './highlighter.directive';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HighlighterDirective } from './highlighter.directive';
     ShoppingListComponent,
     ShoppingEditComponent,
     ShoppingItemComponent,
-    HighlighterDirective
+    HighlighterDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule
